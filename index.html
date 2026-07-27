@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" class="w-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,600;1,800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Simplified Mortgages</title>
+    <link rel="icon" type="image/png" href="assets/logos/small logo.png">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: 'Newsreader';
+    }
+
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+
+    .animate-marquee {
+        display: flex;
+        width: max-content;
+        animation: marquee 20s linear infinite;
+        will-change: transform;
+    }
+</style>
+<body class="overflow-x-hidden">
+    <header id="header" class="fixed top-5 left-0 w-full z-50 transition-all duration-300 ease-in-out">
+        <div class="flex w-[90%] lg:w-[80%] m-auto justify-between items-center">
+            <a id="logo-link" href="#" class="relative flex items-center justify-start w-48 sm:w-60 md:w-72 h-16 pointer-events-auto">
+                <img id="header-logo" src="assets/logos/logo.png" alt="Simplified Mortgages Logo" class="absolute left-0 top-1/2 -translate-y-1/2 h-16 sm:h-20 md:h-24 max-w-none object-contain transition-all duration-700 cubic-bezier(0.4,0,0.2,1) opacity-100 scale-100 pointer-events-none origin-left" />
+                <img id="header-logo-small" src="assets/logos/small logo.png" alt="Simplified Mortgages Logo" class="absolute left-0 top-1/2 -translate-y-1/2 h-10 sm:h-12 max-w-none object-contain transition-all duration-700 cubic-bezier(0.4,0,0.2,1) opacity-0 scale-90 pointer-events-none origin-left" />
+            </a>
+            <nav class="hidden lg:block">
+                <ul class="flex gap-2 items-center">
+                    <a id="nav-home" class="font-semibold text-center w-30 py-1 border-1 border-transparent hover:border-[#22306A] text-[#22306A] transition-all duration-100 rounded-2xl" href="#">HOME</a>
+                    <a id="nav-about" class="font-semibold text-center w-30 py-1 border-1 border-transparent hover:border-[#22306A] text-[#22306A] transition-all duration-300 rounded-2xl" href="#about">ABOUT</a>
+                    <a id="nav-partner" class="font-semibold text-center w-30 py-1 border-1 border-transparent hover:border-[#22306A] text-[#22306A] transition-all duration-300 rounded-2xl" href="#partner">PARTNERS</a>
+                    <a id="nav-service" class="font-semibold text-center w-30 py-1 border-1 border-transparent hover:border-[#22306A] text-[#22306A] transition-all duration-300 rounded-2xl" href="#service">SERVICES</a>
+                </ul>
+            </nav>
+            <a id="nav-contact" class="hidden lg:block font-semibold text-center w-30 py-1 border-1 border-transparent hover:border-[#22306A] text-[#22306A] transition-all duration-300 rounded-2xl" href="#contact">CONTACT</a>
+            <button id="menu-btn" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 z-50 p-2 rounded-lg bg-white/80 shadow-md border border-slate-200" aria-label="Toggle Navigation Menu">
+                <span class="w-6 h-0.5 bg-[#22306A] transition-all duration-300 origin-center" id="line1"></span>
+                <span class="w-6 h-0.5 bg-[#22306A] transition-all duration-300" id="line2"></span>
+                <span class="w-6 h-0.5 bg-[#22306A] transition-all duration-300 origin-center" id="line3"></span>
+            </button>
+        </div>
+        <div id="mobile-menu" class="lg:hidden fixed inset-x-0 top-0 bg-white/95 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-center gap-6 text-center transition-all duration-300 opacity-0 pointer-events-none h-screen z-40">
+            <a class="mobile-nav-link text-2xl font-semibold text-[#22306A] hover:opacity-75 transition-opacity" href="#">HOME</a>
+            <a class="mobile-nav-link text-2xl font-semibold text-[#22306A] hover:opacity-75 transition-opacity" href="#about">ABOUT</a>
+            <a class="mobile-nav-link text-2xl font-semibold text-[#22306A] hover:opacity-75 transition-opacity" href="#partner">PARTNERS</a>
+            <a class="mobile-nav-link text-2xl font-semibold text-[#22306A] hover:opacity-75 transition-opacity" href="#service">SERVICES</a>
+            <a class="mobile-nav-link text-2xl font-semibold text-white bg-[#22306A] px-8 py-3 rounded-2xl hover:bg-[#1a2455] transition-all" href="#contact">CONTACT</a>
+        </div>
+    </header>
+    <section id="hero" class="flex flex-col lg:flex-row pt-28 md:pt-36 lg:pt-30 text-center lg:text-justify w-[90%] m-auto min-h-screen lg:h-screen items-center justify-center lg:justify-around gap-8 lg:gap-0">
+        <div class="w-full lg:w-[30%] flex flex-col items-center lg:items-start">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Finding you the best <span class="font-semibold text-[#22306A]">Mortgage</span> deals</h1>
+            <br/>
+            <p class="text-lg sm:text-xl md:text-2xl">Let's make your mortgage journey truly simple and stress-free.</p>
+            <br/>
+            <a href="#contact" class="bg-[#22306A] text-white px-6 py-3 rounded-2xl hover:bg-[#1a2455] transition-all duration-300">Contact us</a>
+        </div>
+        <img src="assets/hero-image.svg" alt="Hero Image" class="w-72 sm:w-96 md:w-[30rem] lg:w-180 h-auto max-h-[45vh] lg:max-h-none"/>
+    </section>
+    <section id="about" class="flex flex-col text-left w-[90%] m-auto h-auto items-center justify-around py-12 md:py-16">
+        <div class="flex flex-col lg:flex-row justify-around items-center w-full bg-white p-6 sm:p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 gap-8 lg:gap-0">
+            <img src="assets/house select.svg" alt="Hero Image" class="w-72 sm:w-96 md:w-[28rem] lg:w-180 h-auto drop-shadow-md hover:scale-[1.02] transition-transform duration-500 ease-out"/>
+            <div class="w-full lg:w-[35%]">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light">Who <span class="font-bold text-[#22306A] italic">we</span> are</h1>
+                <p class="text-xl sm:text-2xl text-[#22306A] font-medium mt-1">Your trusted partner in mortgage solutions.</p>
+                <br/>
+                <p class="text-base sm:text-lg lg:text-xl text-justify text-slate-600 leading-relaxed">Welcome to Simplified Mortgages, your dedicated mortgage broker company. Based in Sydney, we proudly serve clients across all of Australia, helping you achieve your property goals. As the Director, I founded this company to simplify the mortgage process. We know loans can feel complex, but we believe they don't have to be.</p>
+                <p class="text-base sm:text-lg lg:text-xl text-justify text-slate-600 leading-relaxed mt-4">Our approach is client-focused: we take the time to understand your unique needs, then throughly search a vast network of lenders. This ensures we find the best solutions that truly fit your situation.</p>
+                <br/>
+                <p class="text-base sm:text-lg lg:text-xl text-justify text-slate-600 leading-relaxed">At Simplified Mortgages, we offer clear, concise, and caring guidance. For home loans, investments, refinances, or car loans, we're here to unlock opportunities and simplify your financial journey.</p>
+                <br/>
+                <a href="#contact" class="inline-block bg-[#22306A] text-white px-8 py-3.5 rounded-2xl hover:bg-[#1a2455] hover:shadow-xl hover:shadow-[#22306A]/20 hover:-translate-y-0.5 transition-all duration-300 font-sans tracking-wide text-sm uppercase font-semibold">Contact us</a>
+            </div>
+        </div>
+        <div class="mt-12 sm:mt-16 md:mt-20 w-full">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center">Why <span class="font-semibold text-[#22306A]">Choose</span> Us?</h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-center max-w-4xl m-auto mt-4 text-gray-700 px-2">Choosing a mortgage broker is a significant decision. At Simplified Mortgages, we're dedicated to making your finance journey smooth, clear, and successful.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-8 sm:mt-12 w-full lg:w-[90%] m-auto mb-12 sm:mb-16 md:mb-20">
+                <div class="flex flex-col border-2 border-[#22306A] rounded-2xl p-6 hover:translate-y-[-5px] hover:shadow-lg hover:shadow-[#22306A]/20 transition-all duration-300 bg-white">
+                    <div class="w-12 h-12 flex items-center justify-center bg-[#22306A] text-white text-2xl font-bold rounded-xl mb-4">01</div>
+                    <h2 class="text-2xl font-semibold text-[#22306A] mb-2">Australia-Wide Service</h2>
+                    <p class="text-base sm:text-lg text-justify text-gray-700">Though based in Sydney, we proudly serve clients in every state and territory. No matter where you are across Australia, we're here to help you navigate your loan options seamlessly.</p>
+                </div>
+                <div class="flex flex-col border-2 border-[#22306A] rounded-2xl p-6 hover:translate-y-[-5px] hover:shadow-lg hover:shadow-[#22306A]/20 transition-all duration-300 bg-white">
+                    <div class="w-12 h-12 flex items-center justify-center bg-[#22306A] text-white text-2xl font-bold rounded-xl mb-4">02</div>
+                    <h2 class="text-2xl font-semibold text-[#22306A] mb-2">Truly Simplified Process</h2>
+                    <p class="text-base sm:text-lg text-justify text-gray-700">We cut through complex financial jargon to provide straightforward, transparent guidance. We speak fluent mortgage so you always feel confident and informed at every step.</p>
+                </div>
+                <div class="flex flex-col border-2 border-[#22306A] rounded-2xl p-6 hover:translate-y-[-5px] hover:shadow-lg hover:shadow-[#22306A]/20 transition-all duration-300 bg-white">
+                    <div class="w-12 h-12 flex items-center justify-center bg-[#22306A] text-white text-2xl font-bold rounded-xl mb-4">03</div>
+                    <h2 class="text-2xl font-semibold text-[#22306A] mb-2">Your Goals, Our Focus</h2>
+                    <p class="text-base sm:text-lg text-justify text-gray-700">We listen intently to your unique situation and aspirations. Every solution we deliver is tailored precisely to your long-term needs rather than a one-size-fits-all product.</p>
+                </div>
+                <div class="flex flex-col border-2 border-[#22306A] rounded-2xl p-6 hover:translate-y-[-5px] hover:shadow-lg hover:shadow-[#22306A]/20 transition-all duration-300 bg-white col-span-1 md:col-span-1">
+                    <div class="w-12 h-12 flex items-center justify-center bg-[#22306A] text-white text-2xl font-bold rounded-xl mb-4">04</div>
+                    <h2 class="text-2xl font-semibold text-[#22306A] mb-2">Comprehensive Market Access</h2>
+                    <p class="text-base sm:text-lg text-justify text-gray-700">Leveraging strong relationships across an extensive network of lenders, we diligently analyze options to secure the most competitive and suitable terms for you.</p>
+                </div>
+                <div class="flex flex-col border-2 border-[#22306A] rounded-2xl p-6 hover:translate-y-[-5px] hover:shadow-lg hover:shadow-[#22306A]/20 transition-all duration-300 bg-white col-span-1 md:col-span-1 lg:col-span-2">
+                    <div class="w-12 h-12 flex items-center justify-center bg-[#22306A] text-white text-2xl font-bold rounded-xl mb-4">05</div>
+                    <h2 class="text-2xl font-semibold text-[#22306A] mb-2">Dedicated Partnership</h2>
+                    <p class="text-base sm:text-lg text-justify text-gray-700">From your initial consultation through loan settlement and beyond, we remain committed to standing alongside you, ensuring a completely stress-free experience throughout your property journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="partner" class="flex flex-col text-left w-[90%] m-auto h-auto items-center justify-around py-12 md:py-16">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center">Our <span class="font-semibold text-[#22306A]">Partners</span></h1>
+        <div class="w-full mt-8 sm:mt-12 md:mt-15 overflow-hidden">
+            <div class="animate-marquee flex items-center">
+                <div class="flex gap-8 sm:gap-12 md:gap-16 items-center shrink-0 pr-8 sm:pr-12 md:pr-16">
+                    <img src="assets/bank logo/anz logo.jpg" alt="ANZ" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/commonwealth bank logo.jpg" alt="Commonwealth Bank" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/west pac logo.jpg" alt="Westpac" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/maquire bank logo.png" alt="Macquarie Bank" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/nab logo.png" alt="NAB" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/st.geroge logo.png" alt="St. George" class="h-12 sm:h-16 md:h-20 w-auto object-contain">
+                    <img src="assets/bank logo/Bank-of-China-logo.png" alt="Bank of China" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/bankwest-logo.png" alt="Bankwest" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/bluestone logo.png" alt="Bluestone" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/firstmac logo.png" alt="FirstMac" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/ing-logo.png" alt="ING" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/liberty financial logo.png" alt="Liberty Financial" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/members equity logo.webp" alt="Members Equity" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                </div>
+                <div class="flex gap-8 sm:gap-12 md:gap-16 items-center shrink-0 pr-8 sm:pr-12 md:pr-16">
+                    <img src="assets/bank logo/anz logo.jpg" alt="ANZ" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/commonwealth bank logo.jpg" alt="Commonwealth Bank" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/west pac logo.jpg" alt="Westpac" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/maquire bank logo.png" alt="Macquarie Bank" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/nab logo.png" alt="NAB" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/st.geroge logo.png" alt="St. George" class="h-12 sm:h-16 md:h-20 w-auto object-contain">
+                    <img src="assets/bank logo/Bank-of-China-logo.png" alt="Bank of China" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/bankwest-logo.png" alt="Bankwest" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/bluestone logo.png" alt="Bluestone" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/firstmac logo.png" alt="FirstMac" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/ing-logo.png" alt="ING" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/liberty financial logo.png" alt="Liberty Financial" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/members equity logo.webp" alt="Members Equity" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="service" class="w-[90%] lg:w-[85%] m-auto min-h-screen py-16 md:py-24">
+        <div class="flex flex-col justify-center items-center h-full">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center font-light">Our <span class="font-bold text-[#22306A] italic">Services</span></h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 mt-10 sm:mt-16 w-full">
+                <div class="flex flex-col justify-between items-center bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-[#22306A]/15 hover:border-[#22306A] transition-all duration-300 group">
+                    <img src="assets/services images/home loans.svg" class="w-36 sm:w-48 h-36 sm:h-48 drop-shadow-md group-hover:scale-105 transition-transform duration-300" alt="Home Loans" /><br/>
+                    <div class="w-full">
+                        <p class="text-sm font-sans font-semibold text-center text-[#22306A] uppercase tracking-wider bg-blue-50 py-1.5 px-4 rounded-full w-max m-auto">Home Loans</p>
+                        <br/>
+                        <h1 class="text-2xl sm:text-3xl text-center font-semibold text-slate-800">First Home Buyers</h1>
+                        <p class="text-base sm:text-lg text-justify text-slate-600 leading-relaxed mt-4">Stepping into your first home is an exciting milestone. Navigating the world of home loans, grants, and paperwork can feel overwhelming. At Simplified Mortgages, we guide first home buyers through every step. We'll clarify the process, explore available options, and connect you with the right finance to make your dream home a reality.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-between items-center bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-[#22306A]/15 hover:border-[#22306A] transition-all duration-300 group">
+                    <img src="assets/services images/refinancing.svg" class="w-36 sm:w-48 h-36 sm:h-48 drop-shadow-md group-hover:scale-105 transition-transform duration-300" alt="Refinancing Loans"/><br/>
+                    <div class="w-full">
+                        <p class="text-sm font-sans font-semibold text-center text-[#22306A] uppercase tracking-wider bg-blue-50 py-1.5 px-4 rounded-full w-max m-auto">Refinancing Loans</p>
+                        <br/>
+                        <h1 class="text-2xl sm:text-3xl text-center font-semibold text-slate-800">Refinance Your Home</h1>
+                        <p class="text-base sm:text-lg text-justify text-slate-600 leading-relaxed mt-4">Is your current home loan working for you? Refinancing means getting a new loan that fits your life better now. It's a chance to save money and reach your financial goals sooner. At Simplified Mortgages, we use our market knowledge and lender connections to find you the perfect solution. We compare rates and products to ensure you get the most favorable terms.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-between items-center bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-[#22306A]/15 hover:border-[#22306A] transition-all duration-300 group md:col-span-2 lg:col-span-1 md:w-1/2 md:m-auto lg:w-full">
+                    <img src="assets/services images/investment.svg" class="w-36 sm:w-48 h-36 sm:h-48 drop-shadow-md group-hover:scale-105 transition-transform duration-300" alt="Investment Loans"/><br/>
+                    <div class="w-full">
+                        <p class="text-sm font-sans font-semibold text-center text-[#22306A] uppercase tracking-wider bg-blue-50 py-1.5 px-4 rounded-full w-max m-auto">Investment Loans</p>
+                        <br/>
+                        <h1 class="text-2xl sm:text-3xl text-center font-semibold text-slate-800">Investment Loans</h1>
+                        <p class="text-base sm:text-lg text-justify text-slate-600 leading-relaxed mt-4">Ready to expand your portfolio or start your investment journey? Securing the right finance is key to your success. At Simplified Mortgages, we connect you with smart financing solutions for your investment property goals. We'll work to find terms that help your investments grow and make your financial future more secure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section id="contact" class="flex flex-col lg:flex-row text-center lg:text-left w-[90%] m-auto min-h-screen items-center justify-center lg:justify-around gap-8 lg:gap-0 py-12">
+        <div class="w-full lg:w-[30%] flex flex-col items-center lg:items-start">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Contact <span class="font-semibold text-[#22306A]">Us</span></h1>
+            <br/>
+            <p class="text-lg sm:text-xl">Email: info@simplifiedmortgages.com</p>
+        </div>
+        <img src="assets/Tiny house-bro.svg" alt="Hero Image" class="w-72 sm:w-96 md:w-[30rem] lg:w-180 h-auto max-h-[45vh] lg:max-h-none"/>
+    </section>
+    <footer class="py-6 text-center text-slate-600">
+        <p>&copy; 2026 Simplified Mortgages. All rights reserved.</p>
+    </footer>
+</body>
+
+<script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const lenis = new Lenis({
+            duration: 1.2,
+            lerp: 0.1,
+            smoothWheel: true,
+            wheelMultiplier: 0.7,
+            touchMultiplier: 1.5,
+            infinite: false
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        const header = document.getElementById("header");
+        const headerLogo = document.getElementById("header-logo");
+        const headerLogoSmall = document.getElementById("header-logo-small");
+        const sections = document.querySelectorAll("section");
+
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const line1 = document.getElementById("line1");
+        const line2 = document.getElementById("line2");
+        const line3 = document.getElementById("line3");
+        let isMenuOpen = false;
+
+        const toggleMenu = () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove("opacity-0", "pointer-events-none");
+                mobileMenu.classList.add("opacity-100", "pointer-events-auto");
+                line1.classList.add("rotate-45", "translate-y-2");
+                line2.classList.add("opacity-0");
+                line3.classList.add("-rotate-45", "-translate-y-2");
+            } else {
+                mobileMenu.classList.remove("opacity-100", "pointer-events-auto");
+                mobileMenu.classList.add("opacity-0", "pointer-events-none");
+                line1.classList.remove("rotate-45", "translate-y-2");
+                line2.classList.remove("opacity-0");
+                line3.classList.remove("-rotate-45", "-translate-y-2");
+            }
+        };
+
+        if (menuBtn) {
+            menuBtn.addEventListener("click", toggleMenu);
+        }
+
+        document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+            link.addEventListener("click", () => {
+                if (isMenuOpen) toggleMenu();
+            });
+        });
+
+        let headerState = null;
+
+        const setScrolledHeader = () => {
+            if (headerState === "scrolled") return;
+            headerState = "scrolled";
+            header.classList.add("top-0!", "bg-white/50", "shadow-md", "backdrop-blur-md");
+            header.classList.remove("top-5");
+            
+            if (headerLogo) {
+                headerLogo.classList.remove("opacity-100", "scale-100");
+                headerLogo.classList.add("opacity-0", "scale-40");
+            }
+            if (headerLogoSmall) {
+                headerLogoSmall.classList.remove("opacity-0", "scale-40");
+                headerLogoSmall.classList.add("opacity-100", "scale-100");
+            }
+        };
+
+        const setTopHeader = () => {
+            if (headerState === "top") return;
+            headerState = "top";
+            header.classList.remove("top-0!", "bg-white", "shadow-md");
+            header.classList.add("top-5");
+            
+            if (headerLogo) {
+                headerLogo.classList.remove("opacity-0", "scale-40");
+                headerLogo.classList.add("opacity-100", "scale-100");
+            }
+            if (headerLogoSmall) {
+                headerLogoSmall.classList.remove("opacity-100", "scale-100");
+                headerLogoSmall.classList.add("opacity-0", "scale-100");
+            }
+        };
+
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", (e) => {
+                e.preventDefault();
+                const target = anchor.getAttribute("href");
+
+                if (target !== "#") {
+                    setScrolledHeader();
+                    lenis.scrollTo(target, { offset: -80 });
+                } else {
+                    setTopHeader();
+                    lenis.scrollTo(0);
+                }
+            });
+        });
+
+        const navLinks = {
+            hero: document.querySelector("#nav-home"),
+            about: document.querySelector("#nav-about"),
+            contact: document.querySelector("#nav-contact"),
+            partner: document.querySelector("#nav-partner"),
+            service: document.querySelector("#nav-service")
+        };
+
+        const navLinksList = Object.values(navLinks);
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const link = navLinks[entry.target.id];
+                        if (link) {
+                            navLinksList.forEach((l) => {
+                                if (l) l.classList.remove("bg-[#22306A]", "text-white");
+                            });
+                            link.classList.add("bg-[#22306A]", "text-white");
+                        }
+                    }
+                });
+            },
+            {
+                rootMargin: "-35% 0px -35% 0px"
+            }
+        );
+
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
+
+        const updateHeaderOnScroll = () => {
+            if (window.scrollY > 5) {
+                setScrolledHeader();
+            } else {
+                setTopHeader();
+            }
+        };
+
+        window.addEventListener("scroll", updateHeaderOnScroll, { passive: true });
+    });
+</script>
+</html>
