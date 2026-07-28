@@ -29,11 +29,11 @@
     }
 </style>
 <body class="overflow-x-hidden">
-    <header id="header" class="fixed top-15 left-0 w-full z-50 transition-all duration-400 ease-in-out">
+    <header id="header" class="fixed top-15 left-0 w-full z-50 transition-all duration-200 ease-in-out">
         <div class="flex w-[90%] lg:w-[80%] m-auto justify-between items-center">
             <a id="logo-link" href="#" class="relative flex items-center justify-start w-48 sm:w-60 md:w-72 h-16 pointer-events-auto">
-                <img id="header-logo" src="assets/logos/logo.png" alt="Simplified Mortgages Logo" class="absolute left-0 top-1/2 -translate-y-1/2 h-16 sm:h-20 md:h-24 max-w-none object-contain transition-all duration-700 cubic-bezier(0.4,0,0.2,1) opacity-100 scale-100 pointer-events-none origin-left" />
-                <img id="header-logo-small" src="assets/logos/small logo.png" alt="Simplified Mortgages Logo" class="absolute left-0 top-1/2 -translate-y-1/2 h-10 sm:h-12 max-w-none object-contain transition-all duration-700 cubic-bezier(0.4,0,0.2,1) opacity-0 scale-90 pointer-events-none origin-left" />
+                <img id="header-logo" src="assets/logos/logo.png" alt="Simplified Mortgages Logo" class="absolute left-0 top-1/2 -translate-y-1/2 h-16 sm:h-20 md:h-24 max-w-none object-contain transition-all duration-200 cubic-bezier(0.4,0,0.2,1) opacity-100 scale-100 pointer-events-none origin-left" />
+                <img id="header-logo-small" src="assets/logos/small logo.png" alt="Simplified Mortgages Logo" class="absolute left-0 top-1/2 -translate-y-1/2 h-10 sm:h-12 max-w-none object-contain transition-all duration-200 cubic-bezier(0.4,0,0.2,1) opacity-0 scale-90 pointer-events-none origin-left" />
             </a>
             <nav class="hidden lg:block">
                 <ul class="flex gap-2 items-center">
@@ -45,12 +45,12 @@
             </nav>
             <a id="nav-contact" class="hidden lg:block font-semibold text-center w-30 py-1 border-1 border-transparent hover:border-[#22306A] text-[#22306A] transition-all duration-300 rounded-2xl" href="#contact">CONTACT</a>
             <button id="menu-btn" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 z-50 p-2 rounded-lg bg-white/80 shadow-md border border-slate-200" aria-label="Toggle Navigation Menu">
-                <span class="w-6 h-0.5 bg-[#22306A] transition-all duration-300 origin-center" id="line1"></span>
-                <span class="w-6 h-0.5 bg-[#22306A] transition-all duration-300" id="line2"></span>
-                <span class="w-6 h-0.5 bg-[#22306A] transition-all duration-300 origin-center" id="line3"></span>
+                <span class="w-6 h-0.5 bg-[#22306A] transition-all duration-200 origin-center" id="line1"></span>
+                <span class="w-6 h-0.5 bg-[#22306A] transition-all duration-200" id="line2"></span>
+                <span class="w-6 h-0.5 bg-[#22306A] transition-all duration-200 origin-center" id="line3"></span>
             </button>
         </div>
-        <div id="mobile-menu" class="lg:hidden fixed inset-x-0 top-0 bg-white/95 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-center gap-6 text-center transition-all duration-300 opacity-0 pointer-events-none h-screen z-40">
+        <div id="mobile-menu" class="lg:hidden fixed inset-x-0 top-0 bg-white/95 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-center gap-6 text-center transition-all duration-200 opacity-0 pointer-events-none h-screen z-40">
             <a class="mobile-nav-link text-2xl font-semibold text-[#22306A] hover:opacity-75 transition-opacity" href="#">HOME</a>
             <a class="mobile-nav-link text-2xl font-semibold text-[#22306A] hover:opacity-75 transition-opacity" href="#about">ABOUT</a>
             <a class="mobile-nav-link text-2xl font-semibold text-[#22306A] hover:opacity-75 transition-opacity" href="#partner">PARTNERS</a>
@@ -58,7 +58,7 @@
             <a class="mobile-nav-link text-2xl font-semibold text-white bg-[#22306A] px-8 py-3 rounded-2xl hover:bg-[#1a2455] transition-all" href="#contact">CONTACT</a>
         </div>
     </header>
-    <section id="hero" class="flex flex-col lg:flex-row pt-28 md:pt-36 lg:pt-30 text-center lg:text-justify w-[90%] m-auto min-h-screen lg:h-screen items-center justify-center lg:justify-around gap-8 lg:gap-0">
+    <section id="hero" class="flex flex-col-reverse lg:flex-row pt-28 md:pt-36 lg:pt-30 text-center lg:text-justify w-[90%] m-auto min-h-screen lg:h-screen items-center justify-center lg:justify-around gap-8 lg:gap-0">
         <div class="w-full lg:w-[30%] flex flex-col items-center lg:items-start">
             <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Finding you the best <span class="font-semibold text-[#22306A]">Mortgage</span> deals</h1>
             <br/>
@@ -66,11 +66,11 @@
             <br/>
             <a href="#contact" class="bg-[#22306A] text-white px-6 py-3 rounded-2xl hover:bg-[#1a2455] transition-all duration-300">Contact us</a>
         </div>
-        <img src="assets/hero-image.svg" alt="Hero Image" class="w-72 sm:w-96 md:w-[30rem] lg:w-180 h-auto max-h-[45vh] lg:max-h-none"/>
+        <img src="assets/hero-image.svg" alt="Hero Image" class="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl h-auto object-contain"/>
     </section>
     <section id="about" class="flex flex-col text-left w-[90%] m-auto h-auto items-center justify-around py-12 md:py-16">
         <div class="flex flex-col lg:flex-row justify-around items-center w-full bg-white p-6 sm:p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 gap-8 lg:gap-0">
-            <img src="assets/house select.svg" alt="Hero Image" class="w-72 sm:w-96 md:w-[28rem] lg:w-180 h-auto drop-shadow-md hover:scale-[1.02] transition-transform duration-500 ease-out"/>
+            <img src="assets/house select.svg" alt="Hero Image" class="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl h-auto object-contain drop-shadow-md hover:scale-[1.02] transition-transform duration-500 ease-out"/>
             <div class="w-full lg:w-[35%]">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light">Who <span class="font-bold text-[#22306A] italic">we</span> are</h1>
                 <p class="text-xl sm:text-2xl text-[#22306A] font-medium mt-1">Your trusted partner in mortgage solutions.</p>
@@ -120,34 +120,34 @@
         <div class="w-full mt-8 sm:mt-12 md:mt-15 overflow-hidden">
             <div class="animate-marquee flex items-center">
                 <div class="flex gap-8 sm:gap-12 md:gap-16 items-center shrink-0 pr-8 sm:pr-12 md:pr-16">
-                    <img src="assets/bank logo/anz logo.jpg" alt="ANZ" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/commonwealth bank logo.jpg" alt="Commonwealth Bank" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/west pac logo.jpg" alt="Westpac" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/maquire bank logo.png" alt="Macquarie Bank" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/nab logo.png" alt="NAB" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/st.geroge logo.png" alt="St. George" class="h-12 sm:h-16 md:h-20 w-auto object-contain">
-                    <img src="assets/bank logo/Bank-of-China-logo.png" alt="Bank of China" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/bankwest-logo.png" alt="Bankwest" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/bluestone logo.png" alt="Bluestone" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/firstmac logo.png" alt="FirstMac" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/ing-logo.png" alt="ING" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/liberty financial logo.png" alt="Liberty Financial" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/members equity logo.webp" alt="Members Equity" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/anz logo.jpg" alt="ANZ" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/commonwealth bank logo.jpg" alt="Commonwealth Bank" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/west pac logo.jpg" alt="Westpac" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/maquire bank logo.png" alt="Macquarie Bank" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/nab logo.png" alt="NAB" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/st.geroge logo.png" alt="St. George" class="h-10 sm:h-16 md:h-20 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/Bank-of-China-logo.png" alt="Bank of China" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/bankwest-logo.png" alt="Bankwest" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/bluestone logo.png" alt="Bluestone" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/firstmac logo.png" alt="FirstMac" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/ing-logo.png" alt="ING" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/liberty financial logo.png" alt="Liberty Financial" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/members equity logo.webp" alt="Members Equity" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
                 </div>
                 <div class="flex gap-8 sm:gap-12 md:gap-16 items-center shrink-0 pr-8 sm:pr-12 md:pr-16">
-                    <img src="assets/bank logo/anz logo.jpg" alt="ANZ" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/commonwealth bank logo.jpg" alt="Commonwealth Bank" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/west pac logo.jpg" alt="Westpac" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/maquire bank logo.png" alt="Macquarie Bank" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/nab logo.png" alt="NAB" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/st.geroge logo.png" alt="St. George" class="h-12 sm:h-16 md:h-20 w-auto object-contain">
-                    <img src="assets/bank logo/Bank-of-China-logo.png" alt="Bank of China" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/bankwest-logo.png" alt="Bankwest" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/bluestone logo.png" alt="Bluestone" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/firstmac logo.png" alt="FirstMac" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/ing-logo.png" alt="ING" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/liberty financial logo.png" alt="Liberty Financial" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
-                    <img src="assets/bank logo/members equity logo.webp" alt="Members Equity" class="h-10 sm:h-12 md:h-16 w-auto object-contain">
+                    <img src="assets/bank logo/anz logo.jpg" alt="ANZ" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/commonwealth bank logo.jpg" alt="Commonwealth Bank" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/west pac logo.jpg" alt="Westpac" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/maquire bank logo.png" alt="Macquarie Bank" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/nab logo.png" alt="NAB" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/st.geroge logo.png" alt="St. George" class="h-10 sm:h-16 md:h-20 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/Bank-of-China-logo.png" alt="Bank of China" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/bankwest-logo.png" alt="Bankwest" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/bluestone logo.png" alt="Bluestone" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/firstmac logo.png" alt="FirstMac" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/ing-logo.png" alt="ING" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/liberty financial logo.png" alt="Liberty Financial" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
+                    <img src="assets/bank logo/members equity logo.webp" alt="Members Equity" class="h-8 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain">
                 </div>
             </div>
         </div>
@@ -157,7 +157,7 @@
             <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center font-light">Our <span class="font-bold text-[#22306A] italic">Services</span></h1>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 mt-10 sm:mt-16 w-full">
                 <div class="flex flex-col justify-between items-center bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-[#22306A]/15 hover:border-[#22306A] transition-all duration-300 group">
-                    <img src="assets/services images/home loans.svg" class="w-36 sm:w-48 h-36 sm:h-48 drop-shadow-md group-hover:scale-105 transition-transform duration-300" alt="Home Loans" /><br/>
+                    <img src="assets/services images/home loans.svg" class="w-full max-w-[140px] sm:max-w-[180px] h-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-300" alt="Home Loans" /><br/>
                     <div class="w-full">
                         <p class="text-sm font-sans font-semibold text-center text-[#22306A] uppercase tracking-wider bg-blue-50 py-1.5 px-4 rounded-full w-max m-auto">Home Loans</p>
                         <br/>
@@ -167,7 +167,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col justify-between items-center bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-[#22306A]/15 hover:border-[#22306A] transition-all duration-300 group">
-                    <img src="assets/services images/refinancing.svg" class="w-36 sm:w-48 h-36 sm:h-48 drop-shadow-md group-hover:scale-105 transition-transform duration-300" alt="Refinancing Loans"/><br/>
+                    <img src="assets/services images/refinancing.svg" class="w-full max-w-[140px] sm:max-w-[180px] h-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-300" alt="Refinancing Loans"/><br/>
                     <div class="w-full">
                         <p class="text-sm font-sans font-semibold text-center text-[#22306A] uppercase tracking-wider bg-blue-50 py-1.5 px-4 rounded-full w-max m-auto">Refinancing Loans</p>
                         <br/>
@@ -176,7 +176,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col justify-between items-center bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-8 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-[#22306A]/15 hover:border-[#22306A] transition-all duration-300 group md:col-span-2 lg:col-span-1 md:w-1/2 md:m-auto lg:w-full">
-                    <img src="assets/services images/investment.svg" class="w-36 sm:w-48 h-36 sm:h-48 drop-shadow-md group-hover:scale-105 transition-transform duration-300" alt="Investment Loans"/><br/>
+                    <img src="assets/services images/investment.svg" class="w-full max-w-[140px] sm:max-w-[180px] h-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-300" alt="Investment Loans"/><br/>
                     <div class="w-full">
                         <p class="text-sm font-sans font-semibold text-center text-[#22306A] uppercase tracking-wider bg-blue-50 py-1.5 px-4 rounded-full w-max m-auto">Investment Loans</p>
                         <br/>
@@ -194,7 +194,7 @@
             <br/>
             <p class="text-lg sm:text-xl">Email: info@simplifiedmortgages.com</p>
         </div>
-        <img src="assets/Tiny house-bro.svg" alt="Hero Image" class="w-72 sm:w-96 md:w-[30rem] lg:w-180 h-auto max-h-[45vh] lg:max-h-none"/>
+        <img src="assets/Tiny house-bro.svg" alt="Hero Image" class="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl h-auto object-contain"/>
     </section>
     <footer class="py-6 text-center text-slate-600">
         <p>&copy; 2026 Simplified Mortgages. All rights reserved.</p>
@@ -207,7 +207,6 @@
     document.addEventListener("DOMContentLoaded", () => {
         const lenis = new Lenis({
             duration: 1.2,
-            lerp: 0.1,
             smoothWheel: true,
             wheelMultiplier: 0.7,
             touchMultiplier: 1.5,
